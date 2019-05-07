@@ -47,6 +47,16 @@ namespace StringIO_TextView
             }
         }
 
-
+        private void txtEdit_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == 13)
+            {
+                if (TextCheck())
+                {
+                    e.Handled = true; //기본적으로 키를 누르면 효과음이 발생하는 것을 막음
+                    this.lblResult.Text = OrgStr + this.txtEdit.Text;
+                }
+            }
+        }
     }
 }
