@@ -9,11 +9,23 @@ using System.Windows.Forms;
 
 namespace StringIO_TextView
 {
-    public partial class 문서 : Form
+    public partial class Form1 : Form
     {
-        public 문서()
+        string OrgStr = "";
+
+        public Form1()
         {
             InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            OrgStr = this.lblResult.Text;
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            this.lblResult.Text = OrgStr + this.txtEdit.Text;
         }
     }
 }

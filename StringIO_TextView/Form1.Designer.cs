@@ -1,6 +1,6 @@
 ﻿namespace StringIO_TextView
 {
-    partial class 문서
+    partial class Form1
     {
         /// <summary>
         /// 필수 디자이너 변수입니다.
@@ -52,6 +52,7 @@
             this.btnEdit.TabIndex = 1;
             this.btnEdit.Text = "입력";
             this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // lblResult
             // 
@@ -64,7 +65,7 @@
             this.lblResult.TabIndex = 2;
             this.lblResult.Text = "결과 : ";
             // 
-            // 문서
+            // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -72,8 +73,9 @@
             this.Controls.Add(this.lblResult);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.txtEdit);
-            this.Name = "문서";
+            this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
